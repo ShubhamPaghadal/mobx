@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import About from "./Componenst/About.jsx";
+import Home from "./Componenst/Home";
+import UserStore from "./Userstore.jsx";
 
 function App() {
+  const store = new UserStore();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <UserStore /> */}
+      <Home store={store} />
+      <About store={store} />
+    </>
   );
 }
 
